@@ -218,9 +218,13 @@ function toggledirection(){
   if (DIRECTION=="D"){
     DIRECTION="Y";
     dg("toggledirectionbutton").value="DBMS->Y";
+    document.getElementById("inputlabel").innerHTML="DBMS:";
+    document.getElementById("outputlabel").innerHTML="Y:";
   }else{
     DIRECTION="D";
     dg("toggledirectionbutton").value="Y->DBMS";
+    document.getElementById("inputlabel").innerHTML="Y:";
+    document.getElementById("outputlabel").innerHTML="DBMS:";
   }
   convertall(true);
 }
