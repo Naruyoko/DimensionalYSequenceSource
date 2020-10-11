@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimensional Y-Sequence Source</title>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <h1>Dimensional Y-Sequence Source</h1>
+  <form name=form>
+    <textarea id="input" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:nowrap;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" oninput="requestAnimationFrame(convertall)" contentEditable>1,2,4,8,10,8</textarea>
+    <input type="button" id="toggledirectionbutton" value="Y->DBMS" onclick="toggledirection()">
+    <input type="button" value="Swap" onclick="swap()">
+    <input type="button" value="Convert" onclick="convertall()">
+  </form>
+  <textarea id="output" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:pre;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" readonly></textarea>
+  <input type="button" value="Save" onclick="save(true)">
+  <input type="text" id="copyarea" style="display:none"><br>
+  <img src="https://pbs.twimg.com/media/EkBdo5gWkAQ75pG?format=jpg&name=large" style="width:min(300px,100vw)">
+  <div style="color:gray;margin-left:40px;">The basic idea</div>
+  <p>
+    Converts between YS and DBMS without referring to expansion algorithm.<br>
+    Note that this correspondence is unproven.
+  </p>
+  <div>Version 1</div>
+</body>
+</html>
