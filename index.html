@@ -9,11 +9,13 @@
 <body>
   <h1>Dimensional Y-Sequence Source</h1>
   <form name=form>
+    <span id="inputlabel">Y:</span><br>
     <textarea id="input" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:nowrap;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" oninput="requestAnimationFrame(convertall)" contentEditable>1,2,4,8,10,8</textarea>
     <input type="button" id="toggledirectionbutton" value="Y->DBMS" onclick="toggledirection()">
     <input type="button" value="Swap" onclick="swap()">
     <input type="button" value="Convert" onclick="convertall()">
-  </form>
+  </form><br>
+  <span id="outputlabel">DBMS:</span><br>
   <textarea id="output" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:pre;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" readonly></textarea>
   <input type="button" value="Save" onclick="save(true)">
   <input type="text" id="copyarea" style="display:none"><br>
